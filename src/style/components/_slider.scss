@@ -1,0 +1,59 @@
+.slider {
+  @include smallMq {
+    display: none;
+  }
+
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  height: 0%;
+  overflow: hidden;
+  transition: all 0.75s;
+  background-color: $color-main-4;
+
+  &.active {
+    transition: all 0.75s;
+    height: 350px;
+  }
+
+  &-inner {
+    padding: 1rem;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.25rem 0.5rem;
+
+    button {
+      background-color: transparent;
+      border-color: transparent;
+      font-size: 2rem;
+      color: rgb(236, 49, 49);
+    }
+  }
+  &-links {
+    margin-top: 2rem;
+  }
+  &-link {
+    padding: 1rem 0.75rem;
+    list-style: none;
+    a {
+      text-align: center;
+      font-size: 2rem;
+      text-decoration: none;
+      display: block;
+      color: $color-black-2;
+      width: 100%;
+      transform: all 0.3s;
+      position: relative;
+      &:hover {
+        color: #353535;
+        border-radius: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

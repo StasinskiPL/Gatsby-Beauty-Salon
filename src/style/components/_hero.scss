@@ -1,0 +1,55 @@
+.hero {
+  margin-top: 5rem;
+
+  &-inner {
+    @include maxWidth;
+    min-height: 70vh;
+    @include deskopMq {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      align-items: center;
+    }
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    h1 {
+      font-size: 3.5rem;
+      text-align: center;
+      line-height: 0.9em;
+      @include gradientText;
+      margin-left: -1.5rem;
+      font-style: italic;
+      @include mediumMq {
+        margin-left: -4rem;
+      }
+      @media screen and (min-width: 290px) {
+        font-size: 5rem;
+      }
+      span {
+        display: block;
+        &:last-of-type {
+          margin-left: 2rem;
+          @include smallMq {
+            margin-left: 7rem;
+          }
+          @include mediumMq {
+            margin-left: 10rem;
+          }
+        }
+      }
+      @include mediumMq {
+        font-size: 8.5rem;
+      }
+    }
+    &-btn {
+      @include mainBtn;
+    }
+  }
+  &-image {
+    border-radius: 0.3rem;
+    margin: 0 1.25rem;
+    overflow: hidden;
+  }
+}

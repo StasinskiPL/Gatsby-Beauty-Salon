@@ -1,0 +1,41 @@
+.gallery {
+    margin-top: 5rem;
+  &-inner {
+      @include maxWidth;
+  }
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-transform: capitalize;
+      font-size: 2rem;
+      color: $color-main-3;
+      font-style: italic;
+      @include smallMq {
+        font-size: 2.75rem;
+      }
+      @include mediumMq {
+        font-size: 3.25rem;
+      }
+    }
+    &-underline {
+      height: 5px;
+      width: 80vw;
+      max-width: 200px;
+      margin-top: -1.75rem;
+
+      @include smallMq {
+        margin-top: -2.75rem;
+      }
+      background-image: linear-gradient(
+        to right bottom,
+        #a0016b,
+        #a3106d,
+        #cf2992,
+        #e738a6,
+        #ff47bc
+      );
+    }
+  }
+}

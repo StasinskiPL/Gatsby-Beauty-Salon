@@ -1,0 +1,52 @@
+.info {
+  margin-top: 1.5rem;
+  @include mediumMq {
+    margin-top: 0;
+  }
+  &-inner {
+    @include mediumMq {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &-content {
+    order: 0;
+    margin-top: 2.5rem;
+    @include mediumMq{
+        margin-top: 1rem;
+    }
+
+    h3 {
+      text-align: center;
+      @include gradientText;
+    }
+    p{
+        font-size: 1.25rem;
+        padding: 0.5rem 1.5rem 2rem 0.5rem;
+        @include mediumMq{
+        padding: 1rem 4.5rem;
+
+        }
+    }
+  }
+  &-image {
+      position: relative;
+    outline: 3px solid $color-main-4;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-height: 400px;
+    &::after{
+        content: "";
+        position: absolute;
+        border: 3px solid $color-main-4;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &.reverse {
+      order: -1;
+    }
+  }
+}

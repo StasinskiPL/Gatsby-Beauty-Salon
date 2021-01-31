@@ -1,0 +1,44 @@
+.navbar{
+    &-inner{
+        @include maxWidth;
+        padding: 0.25rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        h2{
+            display: table-cell;
+           vertical-align: middle;
+            @include gradientText;
+        }
+
+        ul{
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 1em;
+            font-size: 1.25rem;
+            @include smallMq{
+                display: flex;
+            }
+            a{
+                @include gradientText;
+            }
+        }
+    }
+    &__logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        &-btn{
+            font-size: 1.75rem;
+            svg{
+                vertical-align: middle;
+            }
+            @include smallMq{
+                display: none;
+            }
+        }
+    }
+}
