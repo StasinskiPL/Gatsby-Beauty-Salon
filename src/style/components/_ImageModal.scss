@@ -1,0 +1,43 @@
+.ImageModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(#000, 0.7);
+  display: grid;
+  place-items: center;
+  &-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0 1rem;
+    background-color: rgba(#000, 0.4);
+    font-size: 1.25rem;
+    &-inner {
+      display: flex;
+      justify-content: flex-end;
+      @include maxWidth;
+    }
+    &-btn {
+      font-size: 2rem;
+      padding: 0%;
+      color: #797979;
+      &:focus,
+      &:active,
+      &:hover {
+        border-width: 0px;
+        outline: 0;
+        color: #ffffff;
+      }
+    }
+  }
+  &-inner {
+    width: 100%;
+    margin-top: 40px;
+    max-width: 1200px;
+    width: 100%;
+  }
+}

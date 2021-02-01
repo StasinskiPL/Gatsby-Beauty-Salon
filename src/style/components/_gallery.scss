@@ -1,7 +1,7 @@
 .gallery {
-    margin-top: 5rem;
+  margin-top: 5rem;
   &-inner {
-      @include maxWidth;
+    @include maxWidth;
   }
   &-title {
     display: flex;
@@ -37,5 +37,32 @@
         #ff47bc
       );
     }
+  }
+  &-list {
+    margin-top: 2rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 1rem;
+    @include smallMq {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mediumMq {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &-image{
+    border-radius: 0.3rem;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  &-link-wrapper{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  &-btn{
+    @include mainBtn;
   }
 }
