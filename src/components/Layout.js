@@ -6,12 +6,14 @@ import Slider from './Slider'
 const Layout = ({children}) => {
     const [openSlider,setOpenSlider] = useState(false)
     return (
-        <main>
-            <Navbar setOpenSlider={setOpenSlider} />
+        <>
+        <Navbar setOpenSlider={setOpenSlider} />
             <Slider openSlider={openSlider} setOpenSlider={setOpenSlider}/>
+        <main>
             {children}
-            <Footer/>
         </main>
+            <Footer/>
+            </>
     )
 }
 

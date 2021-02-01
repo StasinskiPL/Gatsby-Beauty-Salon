@@ -19,7 +19,7 @@ const Hero = () => {
   const {
     allFile: { nodes },
   } = useStaticQuery(query);
-  const { fluid } = nodes[0].childrenImageSharp[0];
+  const { fixed } = nodes[0].childrenImageSharp[0];
   return (
     <section className="hero">
       <div className="hero-inner">
@@ -32,7 +32,9 @@ const Hero = () => {
             Zarezerwuj Spotkanie
           </Link>
         </div>
-        <Image fluid={fluid} className="hero-image" />
+        <div className="hero-image-wrapper">
+        <Image fixed={fixed} className="hero-image" />
+        </div>
       </div>
     </section>
   );
@@ -43,8 +45,8 @@ const query = graphql`
     allFile(filter: { relativePath: { eq: "hero.webp" } }) {
       nodes {
         childrenImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fixed(height: 650) {
+            ...GatsbyImageSharpFixed
           }
         }
       }

@@ -1,5 +1,22 @@
 .footer{
+    margin-top: 4rem;
+    padding: 0.5rem 0;
+    h3{
+        margin-bottom: 0;
+        color: #fefefe;
+        font-style: italic;
+    }
+    background-image: linear-gradient(
+    to right bottom,
+    #a0016b,
+    #a3106d,
+    #cf2992,
+    #e738a6,
+    #ff47bc
+  );
     &-inner{
         @include maxWidth;
+        display: flex;
+        justify-content: center;
     }
 }

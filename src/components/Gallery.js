@@ -4,10 +4,9 @@ import GalleryImage from "./GalleryImage";
 
 const GalleryComponent = ({page=false,propImages}) => {
   const { allFile } = useStaticQuery(query);
-  let images = allFile.nodes.map((node) => node.childrenImageSharp[0].fluid);
+  let images = allFile.nodes.map((node) => node.childrenImageSharp[0].fluid).slice(0,3);
 
   if(propImages){
-      console.log(propImages)
     images = propImages;
   }
   return (

@@ -3,7 +3,7 @@
 
   &-inner {
     @include maxWidth;
-    min-height: 70vh;
+    min-height: 700px;
     @include deskopMq {
       display: grid;
       grid-template-columns: 2fr 3fr;
@@ -48,6 +48,12 @@
     }
   }
   &-image {
+    &-wrapper{
+      max-height: 650px;
+      display: flex;
+      justify-content: center;
+    }
+    height: 100%;
     border-radius: 0.3rem;
     margin: 0 1.25rem;
     overflow: hidden;
